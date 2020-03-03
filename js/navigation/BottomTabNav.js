@@ -1,5 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import ScheduleScreen from '../screens/Schedule';
 import SessionScreen from '../screens/Session';
@@ -17,7 +18,7 @@ const ScheduleStackScreens = props => {
   );
 };
 const FavesStack = createStackNavigator();
-const FavesScreens = props => {
+const FavesStackScreens = props => {
   return (
     <FavesStack.Navigator>
       <FavesStack.Screen name="Schedule" component={FavesScreen} />
@@ -26,7 +27,7 @@ const FavesScreens = props => {
   );
 };
 const AboutStack = createStackNavigator();
-const AboutScreens = props => {
+const AboutStackScreens = props => {
   return (
     <AboutStack.Navigator>
       <AboutStack.Screen name="About" component={AboutScreen} />
@@ -34,10 +35,22 @@ const AboutScreens = props => {
   );
 };
 const MapStack = createStackNavigator();
-const MapScreens = props => {
+const MapStackScreens = props => {
   return (
     <MapStack.Navigator>
       <MapStack.Screen name="Maps" component={MapsScreen} />
     </MapStack.Navigator>
   );
 };
+
+const BottomTabNav = createBottomTabNavigator();
+const BottomTabNavScreens = props => (
+  <BottomTabNav.Navigator>
+    <BottomTabNav.Screen name="Schedule" component={ScheduleStackScreens} />
+    <BottomTabNav.Screen name="Faves" component={FavesStackScreens} />
+    <BottomTabNav.Screen name="About" component={AboutStackScreens} />
+    <BottomTabNav.Screen name="Map" component={MapStackScreens} />
+  </BottomTabNav.Navigator>
+);
+
+export default BottomTabNavScreens;
