@@ -1,18 +1,19 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {MaterialCommunityIcons} from 'react-native-vector-icons';
+// import {MaterialCommunityIcons} from 'react-native-vector-icons';
 
 import ScheduleScreen from '../screens/Schedule';
 import SessionScreen from '../screens/Session';
 import AboutScreen from '../screens/Session';
 import MapsScreen from '../screens/Session';
 import FavesScreen from '../screens/Faves';
+import {sharedScreenOptions} from './config';
 
 const ScheduleStack = createStackNavigator();
 const ScheduleStackScreens = props => {
   return (
-    <ScheduleStack.Navigator>
+    <ScheduleStack.Navigator screenOptions={sharedScreenOptions}>
       <ScheduleStack.Screen name="Schedule" component={ScheduleScreen} />
       <ScheduleStack.Screen name="Session" component={SessionScreen} />
     </ScheduleStack.Navigator>
@@ -21,7 +22,7 @@ const ScheduleStackScreens = props => {
 const FavesStack = createStackNavigator();
 const FavesStackScreens = props => {
   return (
-    <FavesStack.Navigator>
+    <FavesStack.Navigator screenOptions={sharedScreenOptions}>
       <FavesStack.Screen name="Schedule" component={FavesScreen} />
       <FavesStack.Screen name="Session" component={SessionScreen} />
     </FavesStack.Navigator>
@@ -30,7 +31,7 @@ const FavesStackScreens = props => {
 const AboutStack = createStackNavigator();
 const AboutStackScreens = props => {
   return (
-    <AboutStack.Navigator>
+    <AboutStack.Navigator screenOptions={sharedScreenOptions}>
       <AboutStack.Screen name="About" component={AboutScreen} />
     </AboutStack.Navigator>
   );
@@ -38,7 +39,7 @@ const AboutStackScreens = props => {
 const MapStack = createStackNavigator();
 const MapStackScreens = props => {
   return (
-    <MapStack.Navigator>
+    <MapStack.Navigator screenOptions={sharedScreenOptions}>
       <MapStack.Screen name="Maps" component={MapsScreen} />
     </MapStack.Navigator>
   );
@@ -53,6 +54,7 @@ const BottomTabNavScreens = props => (
       inactiveTintColor: 'grey',
       labelStyle: {
         fontSize: 10,
+        fontFamily: 'Montserrat-Light',
       },
       style: {
         backgroundColor: 'black',
@@ -63,9 +65,9 @@ const BottomTabNavScreens = props => (
       component={ScheduleStackScreens}
       options={{
         tabBarLabel: 'Schedule',
-        tabBarIcon: ({color, size}) => (
-          <MaterialCommunityIcons name="home" color={color} size={size} />
-        ),
+        // tabBarIcon: ({color, size}) => (
+        //   <MaterialCommunityIcons name="home" color={color} size={size} />
+        // ),
       }}
     />
     <BottomTabNav.Screen name="Faves" component={FavesStackScreens} />
