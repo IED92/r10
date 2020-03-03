@@ -1,16 +1,14 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import BottomTabNav from './BottomTabNav';
+
 import BottomTabNavScreens from './BottomTabNav';
+import SpeakerModal from '../screens/Speaker';
 
 const RootStack = createStackNavigator();
 const RootStackScreens = props => (
-  <RootStack.Navigator headerMode="none">
-    <RootStack.Screen
-      //   options={{header: false}}
-      name="BottomTab"
-      component={BottomTabNavScreens}
-    />
+  <RootStack.Navigator mode="modal" headerMode="none">
+    <RootStack.Screen name="BottomTab" component={BottomTabNavScreens} />
+    <RootStack.Screen name="Speaker" component={SpeakerModal} />
   </RootStack.Navigator>
 );
 export default RootStackScreens;
