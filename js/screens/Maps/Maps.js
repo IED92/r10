@@ -1,16 +1,16 @@
 import React from 'react';
-import {SafeAreaView, Image, Text, View, ScrollView} from 'react-native';
+import {SafeAreaView, Text, ScrollView} from 'react-native';
 
 import styles from './styles';
 
 import Footer from '../../components/Footer';
 
-class Speaker extends React.Component {
+class Faves extends React.Component {
   render() {
     return (
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
-          <Text>Speaker Screen</Text>
+          <Text>This is the faves screen</Text>
           <Footer />
         </ScrollView>
       </SafeAreaView>
@@ -18,4 +18,4 @@ class Speaker extends React.Component {
   }
 }
 
-export default Speaker;
+export default Faves;

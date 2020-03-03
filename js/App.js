@@ -1,28 +1,18 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, Dimensions} from 'react-native';
-import About from './screens/About/About';
+import {SafeAreaView, ScrollView} from 'react-native';
+import AboutContainer from './screens/About';
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {screenWidth: '', screenHeight: ''};
-  }
-  getScreenSize = () => {
-    const screenWidth = Math.round(Dimensions.get('window').width);
-    const screenHeight = Math.round(Dimensions.get('window').height);
-    this.setState({screenWidth: screenWidth, screenHeight: screenHeight});
-  };
-  render() {
-    return (
+import {NavigationContainer} from '@react-navigation/native';
+
+const App = () => {
+  return (
+    <NavigationContainer>
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
-          {/* <Header />
-          <Text>This is the Front Page</Text> */}
-          <About />
+          <AboutContainer />
         </ScrollView>
       </SafeAreaView>
-    );
-  }
-}
-
+    </NavigationContainer>
+  );
+};
 export default App;
