@@ -9,7 +9,7 @@ class App extends React.Component {
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <Header />
-          <Text>This is the front page</Text>
+          <Text>This is the Front Page</Text>
         </ScrollView>
       </SafeAreaView>
     );
