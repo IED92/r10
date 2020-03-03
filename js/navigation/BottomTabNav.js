@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {MaterialCommunityIcons} from 'react-native-vector-icons';
 
 import ScheduleScreen from '../screens/Schedule';
 import SessionScreen from '../screens/Session';
@@ -57,7 +58,16 @@ const BottomTabNavScreens = props => (
         backgroundColor: 'black',
       },
     }}>
-    <BottomTabNav.Screen name="Schedule" component={ScheduleStackScreens} />
+    <BottomTabNav.Screen
+      name="Schedule"
+      component={ScheduleStackScreens}
+      options={{
+        tabBarLabel: 'Schedule',
+        tabBarIcon: ({color, size}) => (
+          <MaterialCommunityIcons name="home" color={color} size={size} />
+        ),
+      }}
+    />
     <BottomTabNav.Screen name="Faves" component={FavesStackScreens} />
     <BottomTabNav.Screen name="About" component={AboutStackScreens} />
     <BottomTabNav.Screen name="Map" component={MapStackScreens} />
