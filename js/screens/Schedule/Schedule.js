@@ -5,11 +5,11 @@ import styles from './styles';
 
 import Footer from '../../components/Footer';
 
-const Schedule = props => {
+const Schedule = ({navigation}) => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text> This is the Schedule Screen</Text>
-      <TouchableOpacity onPress={() => props.navigation.navigate('Session')}>
+      <TouchableOpacity onPress={() => navigation.navigate('Session')}>
         <Text>Go To Session</Text>
       </TouchableOpacity>
       <Footer />
