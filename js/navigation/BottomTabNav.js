@@ -45,7 +45,18 @@ const MapStackScreens = props => {
 
 const BottomTabNav = createBottomTabNavigator();
 const BottomTabNavScreens = props => (
-  <BottomTabNav.Navigator>
+  <BottomTabNav.Navigator
+    initialRouteName="Schedule"
+    tabBarOptions={{
+      activeTintColor: 'white',
+      inactiveTintColor: 'grey',
+      labelStyle: {
+        fontSize: 10,
+      },
+      style: {
+        backgroundColor: 'black',
+      },
+    }}>
     <BottomTabNav.Screen name="Schedule" component={ScheduleStackScreens} />
     <BottomTabNav.Screen name="Faves" component={FavesStackScreens} />
     <BottomTabNav.Screen name="About" component={AboutStackScreens} />
