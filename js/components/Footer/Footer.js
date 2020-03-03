@@ -1,14 +1,6 @@
-import React, {Fragment} from 'react';
-import {
-  SafeAreaView,
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  ScrollView,
-} from 'react-native';
-
-import {Header} from 'react-native/Libraries/NewAppScreen';
+import React from 'react';
+import {SafeAreaView, Text, View, ScrollView} from 'react-native';
+import styles from './styles';
 
 class Footer extends React.Component {
   render() {
@@ -23,15 +15,5 @@ class Footer extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  footerBox: {
-    alignSelf: 'flex-end',
-    width: '100%',
-    borderTopWidth: 2,
-    borderTopColor: 'lightgrey',
-    padding: 20,
-  },
-});
 
 export default Footer;

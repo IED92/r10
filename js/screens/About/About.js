@@ -1,11 +1,9 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {SafeAreaView, Image, Text, View, ScrollView} from 'react-native';
 
 import styles from './styles';
 
 import Footer from '../../components/Footer';
-
-import {Header} from 'react-native/Libraries/NewAppScreen';
 
 class About extends React.Component {
   render() {
@@ -18,7 +16,7 @@ class About extends React.Component {
               source={require('../../assets/images/r10_logo.png')}
             />
           </View>
-          <View>
+          <View style={styles.container}>
             <Text style={styles.topP}>
               R10 is a conference that focuses on just about any topic related
               to dev.

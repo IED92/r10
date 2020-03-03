@@ -1,9 +1,9 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   headerBox: {
     width: '100%',
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
     borderBottomColor: 'lightgrey',
     padding: 20,
   },
@@ -12,9 +12,7 @@ const styles = StyleSheet.create({
     width: 180,
     height: 44,
   },
-  container: {
-    height: '100%',
-  },
+  container: {},
   topP: {
     marginTop: 15,
     marginHorizontal: 10,
