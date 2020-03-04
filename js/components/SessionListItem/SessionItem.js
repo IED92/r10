@@ -4,7 +4,6 @@ import SessionListItem from '.';
 import moment from 'moment';
 
 const SessionList = ({allSessions, navigation}) => {
-  console.log(allSessions);
   return (
     <View>
       <SectionList
