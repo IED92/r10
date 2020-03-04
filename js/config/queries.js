@@ -17,3 +17,5 @@ const ALL_SESSIONS = gql`
     }
   }
 `;
+
+export default ALL_SESSIONS;
