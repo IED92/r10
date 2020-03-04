@@ -12,7 +12,7 @@ export const createFave = faveId => {
 };
 
 export const deleteFav = faveId => {
-  return AsyncStorage.removeItem('$faveid');
+  return AsyncStorage.removeItem(`${faveId}`);
 };
 
 export const queryFaves = async () => {
