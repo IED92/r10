@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-export const FavesContext = React.createContext();
 import {queryFaves, deleteFave, createFave} from '../../config/models';
+export const FavesContext = React.createContext();
 
 class FavesProvider extends Component {
   constructor(props) {

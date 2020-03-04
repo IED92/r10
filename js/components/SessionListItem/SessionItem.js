@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, SectionList, View} from 'react-native';
-import SessionListItem from '../SessionListItem';
+import SessionListItem from '.';
 import moment from 'moment';
 
 const SessionList = ({allSessions, navigation}) => {

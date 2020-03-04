@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Schedule from './Schedule';
 
-export default class ScheduleContainer extends React.Component {
+class ScheduleContainer extends Component {
   render() {
     return <Schedule navigation={this.props.navigation} />;
   }
 }
+
+export default ScheduleContainer;

@@ -1,22 +1,37 @@
 import React from 'react';
-import {Text, View, TouchableOpacity} from 'react-native';
-
-// import styles from './styles'
-
-import Footer from '../../components/Footer';
+import {Text, View, ActivityIndicator} from 'react-native';
+import styles from './styles';
+import {formatSessionData} from './helpers/formatSessionData';
+import {useQuery} from '@apollo/react-hooks';
+import {ALL_SESSIONS} from '../../config/queries';
 import SessionList from '../../components/SessionList/SessionList';
 
 const Schedule = ({navigation}) => {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text> This is the Schedule Screen</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('Session')}>
-        <Text>Go To Session</Text>
-      </TouchableOpacity>
-      <SessionList />
-      <Footer />
-    </View>
-  );
+  const {loading, error, data} = useQuery(ALL_SESSIONS);
+  if (loading) {
+    return (
+      <View>
+        <ActivityIndicator />
+      </View>
+    );
+  }
+  if (error) {
+    return (
+      <View>
+        <Text>Error </Text>
+      </View>
+    );
+  }
+  if (data) {
+    const allSessions = formatSessionData(data.allSessions);
+    return (
+      <View>
+        {allSessions.length !== 0 && (
+          <SessionList allSessions={allSessions} navigation={navigation} />
+        )}
+      </View>
+    );
+  }
 };
 
 export default Schedule;
