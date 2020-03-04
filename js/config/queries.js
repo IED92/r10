@@ -1,0 +1,17 @@
+const ALL_SESSIONS = gql`
+  {
+    allSessions {
+      id
+      description
+      location
+      startTime
+      title
+      speaker {
+        id
+        bio
+        image
+        name
+      }
+    }
+  }
+`;
