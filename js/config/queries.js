@@ -1,3 +1,5 @@
+import {gql} from 'apollo-boost';
+
 const ALL_SESSIONS = gql`
   {
     allSessions {
