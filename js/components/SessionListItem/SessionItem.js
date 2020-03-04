@@ -1,25 +1,18 @@
 import React from 'react';
-import {Text, SectionList, View} from 'react-native';
-import SessionListItem from '.';
-import moment from 'moment';
+import {Text, TouchableHighlight, View} from 'react-native';
 
-const SessionList = ({allSessions, navigation}) => {
+const ScheduleListItem = ({item, navigation}) => {
   return (
-    <View>
-      <SectionList
-        sections={allSessions}
-        keyExtractor={session => session.id}
-        renderItem={({item}) => (
-          <SessionListItem item={item} navigation={navigation} />
-        )}
-        renderSectionHeader={({section: {title}}) => (
-          <View>
-            <Text>{moment(title).format('h:mm A')}</Text>
-          </View>
-        )}
-      />
-    </View>
+    <TouchableHighlight
+      onPress={() => {
+        navigation.navigate('Session', {item});
+      }}>
+      <View>
+        <Text>{item.location}</Text>
+        <Text>{item.title}</Text>
+      </View>
+    </TouchableHighlight>
   );
 };
 
-export default SessionList;
+export default ScheduleListItem;
