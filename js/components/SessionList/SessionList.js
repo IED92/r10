@@ -1,12 +1,12 @@
 import React from 'react';
-import {Text, SectionList, View} from 'react-native';
+import {Text, SectionList, ScrollView, View} from 'react-native';
 import SessionListItem from '../SessionListItem';
 import moment from 'moment';
 
 const SessionList = ({allSessions, navigation}) => {
   console.log(allSessions);
   return (
-    <View>
+    <ScrollView>
       <SectionList
         sections={allSessions}
         keyExtractor={session => session.id}
@@ -19,7 +19,7 @@ const SessionList = ({allSessions, navigation}) => {
           </View>
         )}
       />
-    </View>
+    </ScrollView>
   );
 };
 
