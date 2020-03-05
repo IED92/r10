@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, TouchableOpacity, Text, View} from 'react-native';
+import {TouchableOpacity, Text, View} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import moment from 'moment';
 import styles from './styles';
@@ -21,7 +21,7 @@ const Session = ({
         ) : null}
       </Text>
       <Text>{session.tile}</Text>
-      <Text>{moment(session.startTime).format('LT')}</Text>
+      <Text>{moment(session.startTime).format('h:mm A')}</Text>
       <Text>{session.description}</Text>
       <SpeakerCard session={session} navigation={navigation} />
       {!faveIds.includes(session.id) ? (

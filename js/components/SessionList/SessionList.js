@@ -5,7 +5,6 @@ import styles from './styles';
 import moment from 'moment';
 
 const SessionList = ({allSessions, navigation}) => {
-  console.log(allSessions);
   return (
     <ScrollView>
       <SectionList

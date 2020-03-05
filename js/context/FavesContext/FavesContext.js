@@ -38,8 +38,8 @@ class FavesProvider extends Component {
   getFavedSessionIds = async () => {
     try {
       const faves = await queryFaves();
-      const ids = faves.map(f => f[0]);
-      this.setState({faveIds: ids});
+      const sessionIds = faves.map(fave => fave[0]);
+      this.setState({faveIds: sessionIds});
     } catch (error) {
       console.log(error);
     }
@@ -51,6 +51,7 @@ class FavesProvider extends Component {
         value={{
           ...this.state,
           addFaveSession: this.addFaveSession,
+          getFavedSessionIds: this.getFavedSessionIds,
           removeFaveSession: this.removeFaveSession,
         }}>
         {this.props.children}
