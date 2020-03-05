@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {Text} from 'react-native';
 import {Query} from '@apollo/react-components';
 import Schedule from './Schedule';
 import {ALL_SESSIONS} from '../../config/queries';
 import Loader from '../../components/Loader';
 import {FavesContext} from '../../context/FavesContext';
 import {formatSessionData} from './helpers/formatSessionData';
-import {ScrollView} from 'react-native-gesture-handler';
 
 // const formattedSData = formatSessionData(data.allSessions);
 
