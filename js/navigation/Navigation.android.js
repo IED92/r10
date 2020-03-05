@@ -7,7 +7,7 @@ import ScheduleScreen from '../screens/Schedule';
 import SessionScreen from '../screens/Session';
 import AboutScreen from '../screens/About';
 import MapsScreen from '../screens/Session';
-import FavesScreen from '../screens/Session';
+import FavesScreen from '../screens/Faves';
 import {sharedScreenOptions} from './config';
 
 const ScheduleStack = createStackNavigator();

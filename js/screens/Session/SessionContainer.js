@@ -10,20 +10,15 @@ export default class SessionContainer extends Component {
   render() {
     return (
       <FavesContext.Consumer>
-        {({faveIds}) => (
-          <Query query={ALL_SESSIONS}>
-            {({loading, error, data}) => {
-              if (loading) {
-                return <Loader />;
-              }
-              if (error) {
-                return <Text> Error </Text>;
-              }
-              if (data) {
-                return <Session />;
-              }
-            }}
-          </Query>
+        {({addFaveSession, getFavedSessionIds, removeFaveSession, faveIds}) => (
+          <Session
+            faveIds={faveIds}
+            navigation={this.props.navigation}
+            session={this.props.route.params.session}
+            addFaveSession={addFaveSession}
+            getFavedSessionIds={getFavedSessionIds}
+            removeFaveSession={removeFaveSession}
+          />
         )}
       </FavesContext.Consumer>
     );
