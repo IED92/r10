@@ -1,2 +1,2 @@
-import SessionItem from './SessionItem';
-export default SessionItem;
+import SessionListItem from './SessionListItem';
+export default SessionListItem;

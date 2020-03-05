@@ -7,8 +7,6 @@ import Loader from '../../components/Loader';
 import {FavesContext} from '../../context/FavesContext';
 import {formatSessionData} from './helpers/formatSessionData';
 
-// const formattedSData = formatSessionData(data.allSessions);
-
 export default class ScheduleContainer extends Component {
   render() {
     return (
@@ -37,35 +35,3 @@ export default class ScheduleContainer extends Component {
     );
   }
 }
-
-// class ScheduleContainer extends Component {
-//   render() {
-//     const {loading, error, data} = useQuery(ALL_SESSIONS);
-//     if (loading) {
-//       return (
-//         <View>
-//           <Loader />
-//         </View>
-//       );
-//     }
-//     if (error) {
-//       return (
-//         <View>
-//           <Text>Error </Text>
-//         </View>
-//       );
-//     }
-//     if (data) {
-//       return (
-//         <FavesContext.Consumer>
-//           {({faveIds}) => (
-//             <Schedule
-//               sessionData={formatSessionData(data.allSessions)}
-//               faveIds={faveIds}
-//             />
-//           )}
-//         </FavesContext.Consumer>
-//       );
-//     }
-//   }
-// }
