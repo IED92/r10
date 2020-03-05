@@ -1,2 +1,2 @@
-import SessionList from './SessionList';
-export default SessionList;
+import SpeakerCard from './SpeakerCard';
+export default SpeakerCard;

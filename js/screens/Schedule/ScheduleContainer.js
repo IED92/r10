@@ -25,6 +25,7 @@ export default class ScheduleContainer extends Component {
                   <Schedule
                     sessionData={formatSessionData(data.allSessions)}
                     faveIds={faveIds}
+                    navigation={this.props.navigation}
                   />
                 );
               }
