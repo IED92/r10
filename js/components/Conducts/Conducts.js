@@ -3,7 +3,14 @@ import {Text, View, TouchableOpacity, LayoutAnimation} from 'react-native';
 // import styles from './styles';
 
 class Conducts extends React.Component {
-  state = {expanded: false};
+  constructor(props) {
+    super(props);
+  }
+  state = {
+    expanded: false,
+    title: this.props.title,
+    description: this.props.description,
+  };
   render() {
     return (
       <View style={{overflow: 'hidden'}}>
@@ -13,10 +20,11 @@ class Conducts extends React.Component {
             this.setState({expanded: !this.state.expanded});
           }}>
           <View>
-            <Text>Press me to {this.state.expanded ? '-' : '+'}!</Text>
+            <Text>{this.state.title}</Text>
+            <Text>{this.state.expanded ? '-' : '+'}</Text>
           </View>
         </TouchableOpacity>
-        {this.state.expanded && <Text>I disappear sometimes!</Text>}
+        {this.state.expanded && <Text>{this.state.description}</Text>}
       </View>
     );
   }

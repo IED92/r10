@@ -8,7 +8,7 @@ import Conducts from '../../components/Conducts';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const About = ({conducts}) => {
-  console.log(conducts);
+  console.log(conducts[0].description);
   return (
     <View>
       <View style={styles.headerBox}>
@@ -28,17 +28,9 @@ const About = ({conducts}) => {
           Vancouver, BC.
         </Text>
         <Text style={styles.h1}>Code if Conduct</Text>
-        <Conducts title={conducts[0].title}>
-          <Text>{conducts[0].description}</Text>
-        </Conducts>
-        {/* {conducts.map(conduct => (
-          <View key={conduct.id}>
-            <TouchableOpacity>
-              <Text>{conduct.title}</Text>
-            </TouchableOpacity>
-            <Text>{conduct.description}</Text>
-          </View>
-        ))} */}
+        {conducts.map(conduct => (
+          <Conducts title={conduct.title} description={conduct.description} />
+        ))}
       </View>
       <Footer />
     </View>
