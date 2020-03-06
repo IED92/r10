@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
   time: {
     color: 'red',
     marginBottom: 10,
+    fontSize: 18,
   },
   description: {
     fontSize: 18,
@@ -29,6 +30,19 @@ const styles = StyleSheet.create({
   presented: {
     color: 'grey',
     fontSize: 18,
+  },
+  linearGradient: {
+    width: 175,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 25,
+  },
+  favebutton: {
+    borderRadius: 25,
+  },
+  buttonText: {
+    color: 'white',
   },
 });
 
