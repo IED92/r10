@@ -17,30 +17,13 @@ export const ALL_SESSIONS = gql`
   }
 `;
 
-export const CODE_OF_CONDUCT = gql`
+export const ALL_CONDUCTS = gql`
   {
     allConducts {
       id
       description
       title
       order
-    }
-  }
-`;
-
-export const SINGLE_SESSION = gql`
-  query Session($id: ID!) {
-    Session(id: $id) {
-      id
-      description
-      location
-      speaker {
-        id
-        image
-        name
-      }
-      startTime
-      title
     }
   }
 `;
