@@ -4,14 +4,15 @@ import SessionListItem from '../SessionListItem';
 import styles from './styles';
 import moment from 'moment';
 
-const SessionList = ({allSessions, navigation}) => {
+const SessionList = ({faves, sessions, navigation}) => {
+  console.log(sessions);
   return (
     <ScrollView>
       <SectionList
-        sections={allSessions}
+        sections={sessions}
         keyExtractor={session => session.id}
         renderItem={({item}) => (
-          <SessionListItem item={item} navigation={navigation} />
+          <SessionListItem faves={faves} item={item} navigation={navigation} />
         )}
         renderSectionHeader={({section: {title}}) => (
           <View style={styles.header}>

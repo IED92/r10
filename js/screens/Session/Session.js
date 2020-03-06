@@ -19,7 +19,7 @@ const Session = ({
         <Text style={styles.location}>{session.location}</Text>
         <Text>
           {faveIds.includes(session.id, 0) ? (
-            <MaterialCommunityIcons name="heart" size="25" color="red" />
+            <MaterialCommunityIcons name="heart" color="red" />
           ) : null}
         </Text>
       </View>

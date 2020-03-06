@@ -4,11 +4,15 @@ import styles from './styles';
 
 import SessionList from '../../components/SessionList/SessionList';
 
-const Schedule = ({sessionData, navigation}) => {
+const Schedule = ({faveIds, sessionData, navigation}) => {
   return (
     <View>
       {sessionData.length !== 0 && (
-        <SessionList allSessions={sessionData} navigation={navigation} />
+        <SessionList
+          faves={faveIds}
+          sessions={sessionData}
+          navigation={navigation}
+        />
       )}
     </View>
   );

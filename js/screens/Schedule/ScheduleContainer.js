@@ -20,6 +20,7 @@ export default class ScheduleContainer extends Component {
               if (error) {
                 return <Text> Error </Text>;
               }
+              console.log('schedule faveIds:', faveIds);
               if (data) {
                 return (
                   <Schedule

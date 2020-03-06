@@ -1,11 +1,8 @@
 import React from 'react';
 import {Image, Text, View} from 'react-native';
-
 import styles from './styles';
-
 import Footer from '../../components/Footer';
 import Conducts from '../../components/Conducts';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const About = ({conducts}) => {
   console.log(conducts[0].description);
