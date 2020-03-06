@@ -15,36 +15,35 @@ const Session = ({
 }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <View style={styles.faveview}>
-          <Text style={styles.location}>{session.location}</Text>
-          <Text>
-            {faveIds.includes(session.id, 0) ? (
-              <MaterialCommunityIcons name="heart" color="red" />
-            ) : null}
-          </Text>
-        </View>
-        <Text style={styles.title}>{session.title}</Text>
-        <Text style={styles.time}>
-          {moment(session.startTime).format('h:mm A')}
+      <View style={styles.faveview}>
+        <Text style={styles.location}>{session.location}</Text>
+        <Text>
+          {faveIds.includes(session.id, 0) ? (
+            <MaterialCommunityIcons name="heart" color="red" />
+          ) : null}
         </Text>
       </View>
+      <Text style={styles.title}>{session.title}</Text>
+      <Text style={styles.time}>
+        {moment(session.startTime).format('h:mm A')}
+      </Text>
       <Text style={styles.description}>{session.description}</Text>
-      <SpeakerCard session={session} navigation={navigation} />
+      <SpeakerCard
+        style={styles.card}
+        session={session}
+        navigation={navigation}
+      />
       {!faveIds.includes(session.id) ? (
-        // <Button
-        //   title="Add To Faves"
-        //   onPress={() => {
-        //     addFaveSession(session.id);
-        //   }}
-        // />
+        // TODO: Refacter buttons as components
         <TouchableOpacity
           style={styles.favebutton}
           onPress={() => {
             addFaveSession(session.id);
           }}>
           <LinearGradient
-            colors={['#4c669f', '#3b5998', '#192f6a']}
+            colors={['#9963ea', '#8797D6']}
+            start={{x: 0.0, y: 1.0}}
+            end={{x: 1.0, y: 0.0}}
             style={styles.linearGradient}>
             <Text style={styles.buttonText}>Add to Faves</Text>
           </LinearGradient>
@@ -56,11 +55,14 @@ const Session = ({
             removeFaveSession(session.id);
           }}>
           <LinearGradient
-            colors={['#4c669f', '#3b5998', '#192f6a']}
+            colors={['#9963ea', '#8797D6']}
+            start={{x: 0.0, y: 1.0}}
+            end={{x: 1.0, y: 0.0}}
             style={styles.linearGradient}>
             <Text style={styles.buttonText}>Remove from Faves</Text>
           </LinearGradient>
         </TouchableOpacity>
+        // End refactor
       )}
     </View>
   );

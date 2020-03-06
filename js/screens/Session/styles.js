@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
   faveview: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
     marginBottom: 10,
   },
   location: {
@@ -39,6 +40,8 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   favebutton: {
+    alignSelf: 'center',
+    marginTop: 25,
     borderRadius: 25,
   },
   buttonText: {
