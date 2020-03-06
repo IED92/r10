@@ -12,20 +12,28 @@ const Session = ({
   addFaveSession,
   removeFaveSession,
 }) => {
+  console.log(session.title);
   return (
-    <View>
-      <Text>{session.location}</Text>
-      <Text>
-        {faveIds.includes(session.id, 0) ? (
-          <MaterialCommunityIcons name="heart" />
-        ) : null}
-      </Text>
-      <Text>{session.tile}</Text>
-      <Text>{moment(session.startTime).format('h:mm A')}</Text>
-      <Text>{session.description}</Text>
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <View style={styles.faveview}>
+          <Text style={styles.location}>{session.location}</Text>
+          <Text>
+            {faveIds.includes(session.id, 0) ? (
+              <MaterialCommunityIcons name="heart" color="red" />
+            ) : null}
+          </Text>
+        </View>
+        <Text style={styles.title}>{session.title}</Text>
+        <Text style={styles.time}>
+          {moment(session.startTime).format('h:mm A')}
+        </Text>
+      </View>
+      <Text style={styles.description}>{session.description}</Text>
       <SpeakerCard session={session} navigation={navigation} />
       {!faveIds.includes(session.id) ? (
         <TouchableOpacity
+          style={styles.favebutton}
           onPress={() => {
             addFaveSession(session.id);
           }}>
@@ -33,6 +41,7 @@ const Session = ({
         </TouchableOpacity>
       ) : (
         <TouchableOpacity
+          style={styles.favebutton}
           onPress={() => {
             removeFaveSession(session.id);
           }}>

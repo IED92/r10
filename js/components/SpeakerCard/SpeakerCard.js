@@ -5,8 +5,9 @@ import styles from './styles';
 const SpeakerCard = ({session, navigation}) => {
   return (
     <>
-      <Text>Presented By:</Text>
+      <Text style={styles.presented}>Presented By:</Text>
       <TouchableOpacity
+        style={styles.card}
         onPress={() => {
           navigation.navigate('Speaker', {speaker: session.speaker});
         }}>
@@ -14,7 +15,7 @@ const SpeakerCard = ({session, navigation}) => {
           style={styles.profilepic}
           source={{uri: session.speaker.image}}
         />
-        <Text>{session.speaker.name}</Text>
+        <Text style={styles.name}>{session.speaker.name}</Text>
       </TouchableOpacity>
     </>
   );
