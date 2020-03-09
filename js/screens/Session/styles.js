@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   time: {
-    color: 'red',
+    color: '#cf392a',
     marginBottom: 10,
     fontSize: 18,
   },
@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'white',
+    fontWeight: 'bold',
   },
 });
 

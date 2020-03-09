@@ -27,7 +27,7 @@ class Conducts extends React.Component {
             this.setState({expanded: !this.state.expanded});
           }}>
           <View style={styles.conduct}>
-            <Text style={styles.indicator}>
+            <Text style={[styles.indicator]}>
               {this.state.expanded ? '-' : '+'}
             </Text>
             <Text style={styles.indicator}>{this.state.title}</Text>

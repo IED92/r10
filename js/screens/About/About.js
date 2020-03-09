@@ -3,10 +3,12 @@ import {Image, Text, View} from 'react-native';
 import styles from './styles';
 import Footer from '../../components/Footer';
 import Conducts from '../../components/Conducts';
+import {ScrollView} from 'react-native-gesture-handler';
+import textStyles from '../../config/styles';
 
 const About = ({conducts}) => {
   return (
-    <View>
+    <ScrollView>
       <View style={styles.headerBox}>
         <Image
           style={styles.headerImage}
@@ -14,16 +16,16 @@ const About = ({conducts}) => {
         />
       </View>
       <View style={styles.container}>
-        <Text>
+        <Text style={textStyles}>
           R10 is a conference that focuses on just about any topic related to
           dev.
         </Text>
-        <Text style={styles.h1}>Date and Venue</Text>
-        <Text>
+        <Text style={[textStyles, styles.h1]}>Date and Venue</Text>
+        <Text style={textStyles}>
           The R10 is a conference that will take place on December 8, 2019 in
           Vancouver, BC.
         </Text>
-        <Text style={styles.h1}>Code if Conduct</Text>
+        <Text style={[textStyles, styles.h1]}>Code if Conduct</Text>
         {conducts.map(conduct => (
           <Conducts
             key={conduct.id}
@@ -33,7 +35,7 @@ const About = ({conducts}) => {
         ))}
       </View>
       <Footer />
-    </View>
+    </ScrollView>
   );
 };
 
