@@ -14,7 +14,11 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   location: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     color: '#999999',
+    paddingRight: 15,
   },
 });
 

@@ -1,30 +1,64 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  headerBox: {
-    width: '100%',
-    borderBottomWidth: 1,
-    borderBottomColor: 'lightgrey',
+  container: {
+    backgroundColor: 'black',
     padding: 20,
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  headerImage: {
-    alignSelf: 'center',
-    width: 180,
-    height: 44,
+  header: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 5,
   },
-  container: {},
-  topP: {
-    marginTop: 15,
-    marginHorizontal: 10,
-  },
-  p: {
-    marginHorizontal: 10,
-  },
-  h1: {
-    fontSize: 24,
+  whttext: {
+    fontSize: 18,
     fontWeight: 'bold',
-    marginHorizontal: 10,
-    marginVertical: 15,
+    color: 'white',
+    marginLeft: '22%',
+  },
+  card: {
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    padding: 20,
+    borderRadius: 10,
+    paddingBottom: 20,
+  },
+  profilepic: {
+    height: 100,
+    width: 100,
+    borderRadius: 50,
+    marginBottom: 20,
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  bio: {
+    fontSize: 18,
+    lineHeight: 25,
+    marginBottom: 20,
+  },
+  linearGradient: {
+    width: 200,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 25,
+  },
+  favebutton: {
+    alignSelf: 'center',
+    marginTop: 25,
+    borderRadius: 25,
+  },
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
   },
 });
 

@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View, Platform} from 'react-native';
 import {Header} from '@react-navigation/stack';
 import LinearGradient from 'react-native-linear-gradient';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const GradientHeader = props => (
   <View style={{backgroundColor: 'white', overflow: 'hidden'}}>
@@ -18,7 +18,7 @@ const GradientHeader = props => (
 
 const MenuButton = ({navigation}) => {
   return (
-    <Icon
+    <MaterialCommunityIcons
       name="menu"
       color="black"
       size={25}
@@ -40,4 +40,17 @@ export const sharedScreenOptions = props => ({
       ios: null,
     });
   },
+});
+
+export const sharedBackOptions = ({navigation}) => ({
+  headerLeft: () => (
+    <MaterialCommunityIcons
+      name="chevron-left"
+      onPress={() => navigation.goBack()}
+      title="Back"
+      color="#fff"
+      style={{marginLeft: 10}}
+      size={35}
+    />
+  ),
 });

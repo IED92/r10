@@ -9,7 +9,7 @@ const SpeakerCard = ({session, navigation}) => {
       <TouchableOpacity
         style={styles.card}
         onPress={() => {
-          navigation.navigate('Speaker', {speaker: session.speaker});
+          navigation.push('Speaker', {speaker: session.speaker});
         }}>
         <Image
           style={styles.profilepic}

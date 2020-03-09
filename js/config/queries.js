@@ -10,6 +10,8 @@ export const ALL_SESSIONS = gql`
         id
         image
         name
+        bio
+        url
       }
       startTime
       title

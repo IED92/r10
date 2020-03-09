@@ -15,12 +15,12 @@ const About = ({conducts}) => {
         />
       </View>
       <View style={styles.container}>
-        <Text style={styles.topP}>
+        <Text>
           R10 is a conference that focuses on just about any topic related to
           dev.
         </Text>
         <Text style={styles.h1}>Date and Venue</Text>
-        <Text style={styles.p}>
+        <Text>
           The R10 is a conference that will take place on December 8, 2019 in
           Vancouver, BC.
         </Text>

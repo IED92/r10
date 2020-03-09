@@ -6,16 +6,10 @@ export default class SessionContainer extends Component {
   render() {
     return (
       <FavesContext.Consumer>
-        {({
-          navigation,
-          addFaveSession,
-          getFavedSessionIds,
-          removeFaveSession,
-          faveIds,
-        }) => (
+        {({addFaveSession, getFavedSessionIds, removeFaveSession, faveIds}) => (
           <Session
             faveIds={faveIds}
-            navigation={navigation}
+            navigation={this.props.navigation}
             session={this.props.route.params.session}
             addFaveSession={addFaveSession}
             getFavedSessionIds={getFavedSessionIds}

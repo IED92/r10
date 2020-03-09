@@ -5,6 +5,7 @@ import moment from 'moment';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import SpeakerCard from '../../components/SpeakerCard/SpeakerCard';
+import CustomButton from '../../components/CustomButtton';
 
 const Session = ({
   session,
@@ -19,7 +20,7 @@ const Session = ({
         <Text style={styles.location}>{session.location}</Text>
         <Text>
           {faveIds.includes(session.id, 0) ? (
-            <MaterialCommunityIcons name="heart" color="red" />
+            <MaterialCommunityIcons name="heart" color="#cf392a" />
           ) : null}
         </Text>
       </View>
@@ -34,19 +35,14 @@ const Session = ({
         navigation={navigation}
       />
       {!faveIds.includes(session.id) ? (
-        // TODO: Refacter buttons as components
         <TouchableOpacity
           style={styles.favebutton}
           onPress={() => {
             addFaveSession(session.id);
           }}>
-          <LinearGradient
-            colors={['#9963ea', '#8797D6']}
-            start={{x: 0.0, y: 1.0}}
-            end={{x: 1.0, y: 0.0}}
-            style={styles.linearGradient}>
-            <Text style={styles.buttonText}>Add to Faves</Text>
-          </LinearGradient>
+          <CustomButton>
+            <Text>Add to Faves</Text>
+          </CustomButton>
         </TouchableOpacity>
       ) : (
         <TouchableOpacity
@@ -54,15 +50,10 @@ const Session = ({
           onPress={() => {
             removeFaveSession(session.id);
           }}>
-          <LinearGradient
-            colors={['#9963ea', '#8797D6']}
-            start={{x: 0.0, y: 1.0}}
-            end={{x: 1.0, y: 0.0}}
-            style={styles.linearGradient}>
-            <Text style={styles.buttonText}>Remove from Faves</Text>
-          </LinearGradient>
+          <CustomButton>
+            <Text>Remove from Faves</Text>
+          </CustomButton>
         </TouchableOpacity>
-        // End refactor
       )}
     </View>
   );

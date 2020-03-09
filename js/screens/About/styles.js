@@ -1,6 +1,9 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+  },
   headerBox: {
     width: '100%',
     borderBottomWidth: 1,
@@ -12,18 +15,9 @@ const styles = StyleSheet.create({
     width: 180,
     height: 44,
   },
-  container: {},
-  topP: {
-    marginTop: 15,
-    marginHorizontal: 10,
-  },
-  p: {
-    marginHorizontal: 10,
-  },
   h1: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginHorizontal: 10,
     marginVertical: 15,
   },
 });

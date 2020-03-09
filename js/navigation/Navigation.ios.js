@@ -8,14 +8,18 @@ import SessionScreen from '../screens/Session';
 import AboutScreen from '../screens/About';
 import MapsScreen from '../screens/Session';
 import FavesScreen from '../screens/Faves';
-import {sharedScreenOptions} from './config';
+import {sharedScreenOptions, sharedBackOptions} from './config';
 
 const ScheduleStack = createStackNavigator();
 const ScheduleStackScreens = props => {
   return (
     <ScheduleStack.Navigator screenOptions={sharedScreenOptions}>
       <ScheduleStack.Screen name="Schedule" component={ScheduleScreen} />
-      <ScheduleStack.Screen name="Session" component={SessionScreen} />
+      <ScheduleStack.Screen
+        name="Session"
+        component={SessionScreen}
+        options={sharedBackOptions}
+      />
     </ScheduleStack.Navigator>
   );
 };
@@ -24,7 +28,11 @@ const FavesStackScreens = props => {
   return (
     <FavesStack.Navigator screenOptions={sharedScreenOptions}>
       <FavesStack.Screen name="Schedule" component={FavesScreen} />
-      <FavesStack.Screen name="Session" component={SessionScreen} />
+      <FavesStack.Screen
+        name="Session"
+        component={SessionScreen}
+        options={sharedBackOptions}
+      />
     </FavesStack.Navigator>
   );
 };

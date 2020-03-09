@@ -1,6 +1,15 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  modal: {
+    flex: 1,
+    alignItems: 'center',
+    padding: 100,
+  },
+  container: {
+    alignItems: 'center',
+    padding: 100,
+  },
   card: {
     height: 125,
     flexDirection: 'row',
