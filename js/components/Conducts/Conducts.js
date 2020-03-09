@@ -7,7 +7,6 @@ import {
   Animated,
 } from 'react-native';
 import styles from './styles';
-// import styles from './styles';
 
 class Conducts extends React.Component {
   constructor(props) {
@@ -21,7 +20,7 @@ class Conducts extends React.Component {
   };
   render() {
     return (
-      <View style={{overflow: 'hidden'}}>
+      <View style={styles.container}>
         <TouchableOpacity
           onPress={() => {
             LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);

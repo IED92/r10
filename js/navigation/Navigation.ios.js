@@ -6,7 +6,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import ScheduleScreen from '../screens/Schedule';
 import SessionScreen from '../screens/Session';
 import AboutScreen from '../screens/About';
-import MapsScreen from '../screens/Session';
+import MapsScreen from '../screens/Maps';
 import FavesScreen from '../screens/Faves';
 import {sharedScreenOptions, sharedBackOptions} from './config';
 

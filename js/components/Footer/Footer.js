@@ -6,7 +6,9 @@ class Footer extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.footerBox}>
-        <Text> {'\u00A9'} Ian Doornbosch | Academy 2017</Text>
+        <Text style={styles.text}>
+          {'\u00A9'} Ian Doornbosch | Academy 2017
+        </Text>
       </SafeAreaView>
     );
   }

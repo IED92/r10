@@ -5,7 +5,6 @@ import styles from './styles';
 const SpeakerCard = ({session, navigation}) => {
   return (
     <>
-      <Text style={styles.presented}>Presented By:</Text>
       <TouchableOpacity
         style={styles.card}
         onPress={() => {

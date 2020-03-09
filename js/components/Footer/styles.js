@@ -9,6 +9,9 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingTop: 30,
   },
+  text: {
+    margin: 10,
+  },
 });
 
 export default styles;

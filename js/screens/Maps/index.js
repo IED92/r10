@@ -1,3 +1,3 @@
-import FavesContainer from './FavesContainer';
+import MapsContainer from './MapsContainer';
 
-export default FavesContainer;
+export default MapsContainer;

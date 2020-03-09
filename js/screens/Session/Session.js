@@ -20,7 +20,7 @@ const Session = ({
         <Text style={styles.location}>{session.location}</Text>
         <Text>
           {faveIds.includes(session.id, 0) ? (
-            <MaterialCommunityIcons name="heart" color="#cf392a" />
+            <MaterialCommunityIcons name="heart" size={20} color="#cf392a" />
           ) : null}
         </Text>
       </View>
@@ -29,11 +29,14 @@ const Session = ({
         {moment(session.startTime).format('h:mm A')}
       </Text>
       <Text style={styles.description}>{session.description}</Text>
-      <SpeakerCard
-        style={styles.card}
-        session={session}
-        navigation={navigation}
-      />
+      {session.speaker && <Text style={styles.presented}>Presented By: </Text>}
+      {session.speaker ? (
+        <SpeakerCard
+          style={styles.card}
+          session={session}
+          navigation={navigation}
+        />
+      ) : null}
       {!faveIds.includes(session.id) ? (
         <TouchableOpacity
           style={styles.favebutton}

@@ -1,30 +1,15 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  headerBox: {
-    width: '100%',
-    borderBottomWidth: 1,
-    borderBottomColor: 'lightgrey',
-    padding: 20,
+  container: {
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  headerImage: {
-    alignSelf: 'center',
-    width: 180,
-    height: 44,
-  },
-  container: {},
-  topP: {
-    marginTop: 15,
-    marginHorizontal: 10,
-  },
-  p: {
-    marginHorizontal: 10,
-  },
-  h1: {
-    fontSize: 24,
+  text: {
+    fontSize: 30,
     fontWeight: 'bold',
-    marginHorizontal: 10,
-    marginVertical: 15,
+    color: '#9963ea',
   },
 });
 
