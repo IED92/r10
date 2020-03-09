@@ -5,7 +5,6 @@ import Footer from '../../components/Footer';
 import Conducts from '../../components/Conducts';
 
 const About = ({conducts}) => {
-  console.log(conducts[0].description);
   return (
     <View>
       <View style={styles.headerBox}>
@@ -26,7 +25,11 @@ const About = ({conducts}) => {
         </Text>
         <Text style={styles.h1}>Code if Conduct</Text>
         {conducts.map(conduct => (
-          <Conducts title={conduct.title} description={conduct.description} />
+          <Conducts
+            key={conduct.id}
+            title={conduct.title}
+            description={conduct.description}
+          />
         ))}
       </View>
       <Footer />

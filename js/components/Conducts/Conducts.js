@@ -20,7 +20,7 @@ class Conducts extends React.Component {
   };
   render() {
     return (
-      <View style={styles.container}>
+      <View key={this.props.id} style={styles.container}>
         <TouchableOpacity
           onPress={() => {
             LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
