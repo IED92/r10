@@ -1,11 +1,11 @@
 import React from 'react';
-import {TouchableOpacity, Text, View, Button} from 'react-native';
+import {TouchableOpacity, Text, View} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import moment from 'moment';
 import styles from './styles';
-import LinearGradient from 'react-native-linear-gradient';
 import SpeakerCard from '../../components/SpeakerCard/SpeakerCard';
 import CustomButton from '../../components/CustomButtton';
+import textStyles from '../../config/styles';
 
 const Session = ({
   session,
@@ -17,19 +17,23 @@ const Session = ({
   return (
     <View style={styles.container}>
       <View style={styles.faveview}>
-        <Text style={styles.location}>{session.location}</Text>
+        <Text style={[textStyles, styles.location]}>{session.location}</Text>
         <Text>
           {faveIds.includes(session.id, 0) ? (
             <MaterialCommunityIcons name="heart" size={20} color="#cf392a" />
           ) : null}
         </Text>
       </View>
-      <Text style={styles.title}>{session.title}</Text>
-      <Text style={styles.time}>
+      <Text style={[textStyles, styles.title]}>{session.title}</Text>
+      <Text style={[textStyles, styles.time]}>
         {moment(session.startTime).format('h:mm A')}
       </Text>
-      <Text style={styles.description}>{session.description}</Text>
-      {session.speaker && <Text style={styles.presented}>Presented By: </Text>}
+      <Text style={[textStyles, styles.description]}>
+        {session.description}
+      </Text>
+      {session.speaker && (
+        <Text style={[textStyles, styles.presented]}>Presented By: </Text>
+      )}
       {session.speaker ? (
         <SpeakerCard
           style={styles.card}

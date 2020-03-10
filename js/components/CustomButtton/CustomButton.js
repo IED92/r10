@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import textStyles from '../../config/styles';
 import styles from './styles';
 
 class CustomButton extends React.Component {
@@ -11,7 +12,9 @@ class CustomButton extends React.Component {
         start={{x: 0.0, y: 1.0}}
         end={{x: 1.0, y: 0.0}}
         style={styles.linearGradient}>
-        <Text style={styles.buttonText}>{this.props.children}</Text>
+        <Text style={[textStyles, styles.buttonText]}>
+          {this.props.children}
+        </Text>
       </LinearGradient>
     );
   }

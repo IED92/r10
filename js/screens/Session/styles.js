@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
+    lineHeight: 30,
     fontWeight: 'bold',
     marginBottom: 10,
   },
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   linearGradient: {
-    width: 175,
+    width: 180,
     height: 40,
     alignItems: 'center',
     justifyContent: 'center',

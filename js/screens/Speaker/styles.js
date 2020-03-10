@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   header: {
+    marginTop: 100,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     color: 'white',
     marginLeft: '22%',
   },
-  card: {
+  content: {
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'space-evenly',
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   linearGradient: {
-    width: 200,
+    width: 220,
     height: 40,
     alignItems: 'center',
     justifyContent: 'center',

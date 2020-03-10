@@ -3,6 +3,7 @@ import {Text, SectionList, ScrollView, View} from 'react-native';
 import SessionListItem from '../SessionListItem';
 import styles from './styles';
 import moment from 'moment';
+import textStyles from '../../config/styles';
 
 const SessionList = ({faves, sessions, navigation}) => {
   return (
@@ -15,7 +16,7 @@ const SessionList = ({faves, sessions, navigation}) => {
         )}
         renderSectionHeader={({section: {title}}) => (
           <View style={styles.header}>
-            <Text>{moment(title).format('h:mm A')}</Text>
+            <Text style={textStyles}>{moment(title).format('h:mm A')}</Text>
           </View>
         )}
       />

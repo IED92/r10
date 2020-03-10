@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, TouchableHighlight, View} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import textStyles from '../../config/styles';
 import styles from './styles';
 
 const SessionListItem = ({faves, item, navigation}) => {
@@ -13,9 +14,9 @@ const SessionListItem = ({faves, item, navigation}) => {
         });
       }}>
       <View style={styles.item}>
-        <Text style={styles.title}>{item.title}</Text>
+        <Text style={[textStyles, styles.title]}>{item.title}</Text>
         <View style={styles.location}>
-          <Text style={styles.location}>{item.location}</Text>
+          <Text style={[textStyles, styles.location]}>{item.location}</Text>
           <Text>
             {faves?.includes(item.id) ? (
               <MaterialCommunityIcons name="heart" size={20} color="#cf392a" />

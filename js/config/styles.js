@@ -1,9 +1,9 @@
 // Create java script object file, use global styles font
 const textStyles = {
-  fontFamily: 'Helvetica',
-  fontWeight: 'normal',
+  fontFamily: 'Montserrat',
+  fontWeight: '300',
   fontSize: 16,
-  lineHeight: 22.4,
+  lineHeight: 25,
   color: 'black',
 };
 

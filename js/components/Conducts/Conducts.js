@@ -6,6 +6,7 @@ import {
   LayoutAnimation,
   Animated,
 } from 'react-native';
+import textStyles from '../../config/styles';
 import styles from './styles';
 
 class Conducts extends React.Component {
@@ -27,14 +28,18 @@ class Conducts extends React.Component {
             this.setState({expanded: !this.state.expanded});
           }}>
           <View style={styles.conduct}>
-            <Text style={[styles.indicator]}>
+            <Text style={styles.indicator}>
               {this.state.expanded ? '-' : '+'}
             </Text>
-            <Text style={styles.indicator}>{this.state.title}</Text>
+            <Text style={[textStyles, styles.indicator]}>
+              {this.state.title}
+            </Text>
           </View>
         </TouchableOpacity>
         {this.state.expanded && (
-          <Text style={styles.description}>{this.state.description}</Text>
+          <Text style={[textStyles, styles.description]}>
+            {this.state.description}
+          </Text>
         )}
       </View>
     );

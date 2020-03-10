@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   description: {
-    lineHeight: 20,
+    lineHeight: 25,
     fontSize: 16,
   },
 });
