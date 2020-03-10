@@ -15,7 +15,6 @@ import PropTypes from 'prop-types';
 
 class Speaker extends Component {
   render() {
-    console.log(this.props);
     return (
       <View style={styles.container}>
         <View style={styles.header}>
@@ -66,4 +65,5 @@ Speaker.propType = {
   speaker: PropTypes.object,
   navigation: PropTypes.object,
 };
+
 export default Speaker;

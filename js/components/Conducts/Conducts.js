@@ -5,10 +5,18 @@ import {
   TouchableOpacity,
   LayoutAnimation,
   Animated,
+  Platform,
+  UIManager,
 } from 'react-native';
 import textStyles from '../../config/styles';
 import styles from './styles';
 import PropTypes from 'prop-types';
+
+if (Platform.OS === 'android') {
+  if (UIManager.setLayoutAnimationEnabledExperimental) {
+    UIManager.setLayoutAnimationEnabledExperimental(true);
+  }
+}
 
 class Conducts extends React.Component {
   constructor(props) {
@@ -21,7 +29,6 @@ class Conducts extends React.Component {
     description: this.props.description,
   };
   render() {
-    console.log(this.props);
     return (
       <View key={this.props.id} style={styles.container}>
         <TouchableOpacity

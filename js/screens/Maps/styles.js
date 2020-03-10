@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 30,
+    lineHeight: 30,
     fontWeight: 'bold',
     color: '#9963ea',
   },

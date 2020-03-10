@@ -21,7 +21,6 @@ export default class FavesContainer extends React.Component {
               if (error) {
                 return <Text> Error </Text>;
               }
-              console.log('faveids:', faveIds);
               const favedSessions = data.allSessions.filter(session =>
                 faveIds.includes(session.id),
               );

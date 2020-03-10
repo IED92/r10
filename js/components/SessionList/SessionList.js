@@ -9,14 +9,6 @@ import PropTypes from 'prop-types';
 const SessionList = ({faves, sessions, navigation}) => {
   return (
     <ScrollView>
-      {console.log(
-        'faves: ',
-        faves,
-        'sessions: ',
-        sessions,
-        'navigation: ',
-        navigation,
-      )}
       <SectionList
         sections={sessions}
         keyExtractor={session => session.id}
