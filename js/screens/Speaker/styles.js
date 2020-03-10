@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   header: {
-    marginTop: 100,
+    marginTop: 30,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
@@ -20,6 +20,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
     marginLeft: '22%',
+  },
+  card: {
+    // justifyContent: 'center',
   },
   content: {
     backgroundColor: 'white',

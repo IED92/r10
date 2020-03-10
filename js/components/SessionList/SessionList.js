@@ -8,20 +8,18 @@ import PropTypes from 'prop-types';
 
 const SessionList = ({faves, sessions, navigation}) => {
   return (
-    <ScrollView>
-      <SectionList
-        sections={sessions}
-        keyExtractor={session => session.id}
-        renderItem={({item}) => (
-          <SessionListItem faves={faves} item={item} navigation={navigation} />
-        )}
-        renderSectionHeader={({section: {title}}) => (
-          <View style={styles.header}>
-            <Text style={textStyles}>{moment(title).format('h:mm A')}</Text>
-          </View>
-        )}
-      />
-    </ScrollView>
+    <SectionList
+      sections={sessions}
+      keyExtractor={session => session.id}
+      renderItem={({item}) => (
+        <SessionListItem faves={faves} item={item} navigation={navigation} />
+      )}
+      renderSectionHeader={({section: {title}}) => (
+        <View style={styles.header}>
+          <Text style={textStyles}>{moment(title).format('h:mm A')}</Text>
+        </View>
+      )}
+    />
   );
 };
 

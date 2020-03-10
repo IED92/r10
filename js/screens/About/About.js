@@ -41,7 +41,7 @@ const About = ({conducts}) => {
 };
 
 About.propTypes = {
-  conducts: PropTypes.object,
+  conducts: PropTypes.array,
 };
 
 export default About;

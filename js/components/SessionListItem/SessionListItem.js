@@ -9,6 +9,7 @@ const SessionListItem = ({faves, item, navigation}) => {
   return (
     <TouchableHighlight
       style={styles.item}
+      underlayColor={'transparent'}
       onPress={() => {
         navigation.navigate('Session', {
           session: item,
