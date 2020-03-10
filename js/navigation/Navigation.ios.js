@@ -27,7 +27,7 @@ const FavesStack = createStackNavigator();
 const FavesStackScreens = props => {
   return (
     <FavesStack.Navigator screenOptions={sharedScreenOptions}>
-      <FavesStack.Screen name="Schedule" component={FavesScreen} />
+      <FavesStack.Screen name="Faves" component={FavesScreen} />
       <FavesStack.Screen
         name="Session"
         component={SessionScreen}
