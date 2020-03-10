@@ -11,6 +11,8 @@ import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './styles';
 import textStyles from '../../config/styles';
+import PropTypes from 'prop-types';
+
 class Speaker extends Component {
   render() {
     console.log(this.props);
@@ -59,4 +61,9 @@ class Speaker extends Component {
     );
   }
 }
+
+Speaker.propType = {
+  speaker: PropTypes.object,
+  navigation: PropTypes.object,
+};
 export default Speaker;

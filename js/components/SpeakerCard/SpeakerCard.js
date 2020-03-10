@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, TouchableOpacity, Image} from 'react-native';
 import textStyles from '../../config/styles';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
 const SpeakerCard = ({session, navigation}) => {
   return (
@@ -19,6 +20,12 @@ const SpeakerCard = ({session, navigation}) => {
       </TouchableOpacity>
     </>
   );
+};
+
+SpeakerCard.propTypes = {
+  speaker: PropTypes.object,
+  session: PropTypes.object,
+  navigation: PropTypes.object,
 };
 
 export default SpeakerCard;

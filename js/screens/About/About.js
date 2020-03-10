@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 import Conducts from '../../components/Conducts';
 import {ScrollView} from 'react-native-gesture-handler';
 import textStyles from '../../config/styles';
+import PropTypes from 'prop-types';
 
 const About = ({conducts}) => {
   return (
@@ -37,6 +38,10 @@ const About = ({conducts}) => {
       <Footer />
     </ScrollView>
   );
+};
+
+About.propTypes = {
+  conducts: PropTypes.object,
 };
 
 export default About;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import styles from './styles';
+import PropTypes from 'prop-types';
 
 import SessionList from '../../components/SessionList/SessionList';
 
@@ -16,6 +16,12 @@ const Schedule = ({faveIds, sessionData, navigation}) => {
       )}
     </View>
   );
+};
+
+Schedule.propTypes = {
+  faveIds: PropTypes.array,
+  sessionData: PropTypes.array,
+  navigation: PropTypes.object,
 };
 
 export default Schedule;

@@ -6,6 +6,7 @@ import styles from './styles';
 import SpeakerCard from '../../components/SpeakerCard/SpeakerCard';
 import CustomButton from '../../components/CustomButtton';
 import textStyles from '../../config/styles';
+import PropTypes from 'prop-types';
 
 const Session = ({
   session,
@@ -64,6 +65,14 @@ const Session = ({
       )}
     </View>
   );
+};
+
+Session.propTypes = {
+  faveIds: PropTypes.array,
+  navigation: PropTypes.object,
+  session: PropTypes.object,
+  addFaveSession: PropTypes.func,
+  removeFaveSession: PropTypes.func,
 };
 
 export default Session;

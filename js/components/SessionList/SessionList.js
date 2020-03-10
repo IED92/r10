@@ -4,10 +4,19 @@ import SessionListItem from '../SessionListItem';
 import styles from './styles';
 import moment from 'moment';
 import textStyles from '../../config/styles';
+import PropTypes from 'prop-types';
 
 const SessionList = ({faves, sessions, navigation}) => {
   return (
     <ScrollView>
+      {console.log(
+        'faves: ',
+        faves,
+        'sessions: ',
+        sessions,
+        'navigation: ',
+        navigation,
+      )}
       <SectionList
         sections={sessions}
         keyExtractor={session => session.id}
@@ -22,6 +31,12 @@ const SessionList = ({faves, sessions, navigation}) => {
       />
     </ScrollView>
   );
+};
+
+SessionList.propTypes = {
+  faves: PropTypes.array,
+  sessions: PropTypes.array,
+  navigation: PropTypes.object,
 };
 
 export default SessionList;

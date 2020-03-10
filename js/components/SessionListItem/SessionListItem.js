@@ -3,6 +3,7 @@ import {Text, TouchableHighlight, View} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import textStyles from '../../config/styles';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
 const SessionListItem = ({faves, item, navigation}) => {
   return (
@@ -26,6 +27,12 @@ const SessionListItem = ({faves, item, navigation}) => {
       </View>
     </TouchableHighlight>
   );
+};
+
+SessionListItem.propTypes = {
+  faves: PropTypes.array,
+  sessions: PropTypes.array,
+  navigation: PropTypes.object,
 };
 
 export default SessionListItem;

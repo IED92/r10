@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import textStyles from '../../config/styles';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
 class Conducts extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class Conducts extends React.Component {
     description: this.props.description,
   };
   render() {
+    console.log(this.props);
     return (
       <View key={this.props.id} style={styles.container}>
         <TouchableOpacity
@@ -45,5 +47,10 @@ class Conducts extends React.Component {
     );
   }
 }
+
+Conducts.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+};
 
 export default Conducts;
