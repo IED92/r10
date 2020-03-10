@@ -6,16 +6,24 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import ScheduleScreen from '../screens/Schedule';
 import SessionScreen from '../screens/Session';
 import AboutScreen from '../screens/About';
-import MapsScreen from '../screens/Session';
+import MapsScreen from '../screens/Maps';
 import FavesScreen from '../screens/Faves';
-import {sharedScreenOptions} from './config';
+import {sharedScreenOptions, sharedBackOptions} from './config';
 
 const ScheduleStack = createStackNavigator();
 const ScheduleStackScreens = props => {
   return (
     <ScheduleStack.Navigator screenOptions={sharedScreenOptions}>
-      <ScheduleStack.Screen name="Schedule" component={ScheduleScreen} />
-      <ScheduleStack.Screen name="Session" component={SessionScreen} />
+      <ScheduleStack.Screen
+        style={{color: 'white'}}
+        name="Schedule"
+        component={ScheduleScreen}
+      />
+      <ScheduleStack.Screen
+        name="Session"
+        component={SessionScreen}
+        options={sharedBackOptions}
+      />
     </ScheduleStack.Navigator>
   );
 };
@@ -46,7 +54,39 @@ const MapStackScreens = props => {
 };
 const Drawer = createDrawerNavigator();
 const DrawerNav = props => (
-  <Drawer.Navigator>
+  <Drawer.Navigator
+    screenOptions={({route}) => ({
+      drawerIcon: ({focused, color, size}) => {
+        let iconName;
+
+        if (route.name === 'Schedule') {
+          iconName = focused ? 'calendar' : 'calendar-blank-outline';
+        } else if (route.name === 'Faves') {
+          iconName = focused ? 'heart-outline' : 'heart';
+        } else if (route.name === 'About') {
+          iconName = focused ? 'information-outline' : 'information';
+        } else if (route.name === 'Maps') {
+          iconName = focused ? 'map-outline' : 'map';
+        }
+        return (
+          <MaterialCommunityIcons name={iconName} size={size} color={color} />
+        );
+      },
+    })}
+    drawerContentOptions={{
+      inactiveTintColor: '#999999',
+      activeTintColor: '#9963ea',
+      activeBackgroundColor: '#e6e6e6',
+      labelStyle: {
+        fontSize: 16,
+        fontFamily: 'Montserrat',
+        fontWeight: 'bold',
+      },
+      style: {
+        width: '100%',
+        backgroundColor: '#ffffff',
+      },
+    }}>
     <Drawer.Screen name="Schedule" component={ScheduleStackScreens} />
     <Drawer.Screen name="Maps" component={MapStackScreens} />
     <Drawer.Screen name="Faves" component={FavesStackScreens} />

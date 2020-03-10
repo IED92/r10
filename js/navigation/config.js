@@ -20,7 +20,7 @@ const MenuButton = ({navigation}) => {
   return (
     <MaterialCommunityIcons
       name="menu"
-      color="black"
+      color="white"
       size={25}
       style={{marginLeft: 20}}
       onPress={() => navigation.toggleDrawer()}
@@ -33,6 +33,10 @@ export const sharedScreenOptions = props => ({
   header: props => <GradientHeader {...props} />,
   headerStyle: {
     backgroundColor: 'transparent',
+  },
+  headerTitleStyle: {
+    color: '#ffffff',
+    fontFamily: 'Montserrat',
   },
   headerLeft: () => {
     return Platform.select({
