@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 16,
     marginBottom: 5,
+    fontWeight: 'bold',
   },
   location: {
     flexDirection: 'row',
@@ -20,6 +21,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     color: '#999999',
     paddingRight: 15,
+    fontWeight: 'bold',
   },
 });
 
