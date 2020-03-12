@@ -1,28 +1,39 @@
 # R10
+
 ### Project App to display infomation on fictious Dev conference.
 
-***
+---
 
-<img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.50.35.png" width="200" height="400" /> <img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.50.39.png" width="200" height="400" /> <img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.50.47.png" width="200" height="400" /> <img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.52.11.png" width="200" height="400" /> <img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.52.24.png" width="200" height="400" /> <img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.52.27.png" width="200" height="400" /> 
-
+<img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.50.35.png" width="200" height="400" /> <img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.50.39.png" width="200" height="400" /> <img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.50.47.png" width="200" height="400" /> <img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.52.11.png" width="200" height="400" /> <img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.52.24.png" width="200" height="400" /> <img src="https://github.com/IED92/r10/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-10%20at%2010.52.27.png" width="200" height="400" />
 
 ### Installation Instructions:
-***
+
+---
+
 **Follow the instructions below to run the application in on your local device.**
 
 **Installation:**
+
 ```
 yarn install
 ```
+
 **Run iOS:**
+
 ```
+cd ios
+pod install
 react-native run-ios
 ```
+
 **Run Android:**
+
 ```
 react-native run-android
 ```
+
 ### Built With:
+
 - GraphQL / Apollo Client
 - React-Native
 - React Navigation

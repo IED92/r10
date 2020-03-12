@@ -32,7 +32,11 @@ const FavesStackScreens = props => {
   return (
     <FavesStack.Navigator screenOptions={sharedScreenOptions}>
       <FavesStack.Screen name="Schedule" component={FavesScreen} />
-      <FavesStack.Screen name="Session" component={SessionScreen} />
+      <FavesStack.Screen
+        name="Session"
+        component={SessionScreen}
+        options={sharedBackOptions}
+      />
     </FavesStack.Navigator>
   );
 };

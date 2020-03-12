@@ -87,9 +87,9 @@ const BottomTabNavScreens = props => (
       },
     })}>
     <BottomTabNav.Screen name="Schedule" component={ScheduleStackScreens} />
+    <BottomTabNav.Screen name="Map" component={MapStackScreens} />
     <BottomTabNav.Screen name="Faves" component={FavesStackScreens} />
     <BottomTabNav.Screen name="About" component={AboutStackScreens} />
-    <BottomTabNav.Screen name="Map" component={MapStackScreens} />
   </BottomTabNav.Navigator>
 );
 
